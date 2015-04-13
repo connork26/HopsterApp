@@ -7,21 +7,39 @@
 //
 
 #import "BeerFeedViewController.h"
+#import "BeerDataSource.h"
 
 @interface BeerFeedViewController ()
 
+@property (nonatomic) BeerDataSource * dataSource;
+@property (nonatomic) NSString * beerURL;
+@property(nonatomic) UIActivityIndicatorView *activityIndicator;
+
 @end
+
+static NSString * cellIdent = @"beerCell";
 
 @implementation BeerFeedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.beerURL = @"beers/allBeers";
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdent];
+    
+    self.dataSource = [[BeerDataSource alloc] initWithBeersAtURL:self.beerURL];
+    self.dataSource.delegate = self;
+    
+    self.refreshControl= [UIRefreshControl new];
+    [self.refreshControl addTarget:self action:@selector(refreshTableView:) forControlEvents:UIControlEventValueChanged];
+    
+    _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.activityIndicator setCenter: self.view.center];
+    [self.view addSubview: self.activityIndicator];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,63 +47,54 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) dataSourceReadyForUse: (BeerDataSource *) dataSource {
+    [self.tableView reloadData];
+    [self.activityIndicator stopAnimating];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    if (![self.dataSource dataSourceReadyForUse]){
+        [self.activityIndicator startAnimating];
+        [self.activityIndicator setHidesWhenStopped:YES];
+    }
+    
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.dataSource numberOfBeers];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdent forIndexPath:indexPath];
     
-    // Configure the cell...
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdent];
+    }
+    
+    Beer * beer = [self.dataSource beerAtIndex:[indexPath row]];
+    
+    UILabel * titleLabel = (UILabel *)[cell viewWithTag:1];
+    UILabel * breweryLabel = (UILabel *)[cell viewWithTag:2];
+    UILabel * styleLabel = (UILabel *)[cell viewWithTag:3];
+    
+    NSLog(@"Beer name: %@", beer.name);
+    
+    [titleLabel setText:beer.name];
+    breweryLabel.text = [beer getValueForAttribute:@"breweryName"];
+    styleLabel.text = [beer getValueForAttribute:@"styleName"];
+
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void) refreshTableView: (UIRefreshControl *) sender {
+    [self.tableView reloadData];
+    [sender endRefreshing];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation

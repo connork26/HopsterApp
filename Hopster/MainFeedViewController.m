@@ -7,6 +7,8 @@
 //
 
 #import "MainFeedViewController.h"
+#import "FirstViewController.h"
+#import "AppDelegate.h"
 
 @interface MainFeedViewController ()
 
@@ -22,6 +24,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,6 +46,7 @@
     // Return the number of rows in the section.
     return 0;
 }
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

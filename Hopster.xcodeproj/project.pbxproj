@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842E049E1AD345B80036945C /* DownloadAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E049D1AD345B80036945C /* DownloadAssistant.m */; };
+		842E04A01AD3AA590036945C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842E049F1AD3AA590036945C /* Main.storyboard */; };
+		842E04A31AD488F50036945C /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04A21AD488F50036945C /* MainTabBarController.m */; };
+		842E04A51AD48C690036945C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842E04A41AD48C680036945C /* Security.framework */; };
+		842E04A81AD4AE5B0036945C /* BeerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04A71AD4AE5B0036945C /* BeerDataSource.m */; };
+		842E04AB1AD4AF4C0036945C /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04AA1AD4AF4C0036945C /* Beer.m */; };
+		842E04AE1AD4B24F0036945C /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04AD1AD4B24F0036945C /* LoginManager.m */; };
+		842E04B41ADB75080036945C /* BarDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04B31ADB75070036945C /* BarDataSource.m */; };
+		842E04B71ADB75C00036945C /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04B61ADB75C00036945C /* Bar.m */; };
 		845D8B241AC28DC600EB874B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B231AC28DC600EB874B /* main.m */; };
 		845D8B271AC28DC600EB874B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B261AC28DC600EB874B /* AppDelegate.m */; };
 		845D8B2A1AC28DC600EB874B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B291AC28DC600EB874B /* FirstViewController.m */; };
-		845D8B2D1AC28DC600EB874B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B2C1AC28DC600EB874B /* SecondViewController.m */; };
-		845D8B301AC28DC600EB874B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D8B2E1AC28DC600EB874B /* Main.storyboard */; };
 		845D8B321AC28DC600EB874B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845D8B311AC28DC600EB874B /* Images.xcassets */; };
 		845D8B351AC28DC600EB874B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845D8B331AC28DC600EB874B /* LaunchScreen.xib */; };
 		845D8B411AC28DC600EB874B /* HopsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B401AC28DC600EB874B /* HopsterTests.m */; };
+		845D8B4F1ACA2F1D00EB874B /* BarFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B4E1ACA2F1D00EB874B /* BarFeedViewController.m */; };
+		845D8B521ACA30E700EB874B /* BeerFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B511ACA30E700EB874B /* BeerFeedViewController.m */; };
+		845D8B551ACA311500EB874B /* MainFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B541ACA311500EB874B /* MainFeedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +38,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		842E049C1AD345B80036945C /* DownloadAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadAssistant.h; sourceTree = "<group>"; };
+		842E049D1AD345B80036945C /* DownloadAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadAssistant.m; sourceTree = "<group>"; };
+		842E049F1AD3AA590036945C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		842E04A11AD488F50036945C /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		842E04A21AD488F50036945C /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		842E04A41AD48C680036945C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		842E04A61AD4AE5B0036945C /* BeerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerDataSource.h; sourceTree = "<group>"; };
+		842E04A71AD4AE5B0036945C /* BeerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerDataSource.m; sourceTree = "<group>"; };
+		842E04A91AD4AF4C0036945C /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beer.h; sourceTree = "<group>"; };
+		842E04AA1AD4AF4C0036945C /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
+		842E04AC1AD4B24F0036945C /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		842E04AD1AD4B24F0036945C /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
+		842E04B21ADB75070036945C /* BarDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarDataSource.h; sourceTree = "<group>"; };
+		842E04B31ADB75070036945C /* BarDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarDataSource.m; sourceTree = "<group>"; };
+		842E04B51ADB75C00036945C /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
+		842E04B61ADB75C00036945C /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
 		845D8B1E1AC28DC600EB874B /* Hopster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hopster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845D8B221AC28DC600EB874B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845D8B231AC28DC600EB874B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,14 +61,17 @@
 		845D8B261AC28DC600EB874B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		845D8B281AC28DC600EB874B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		845D8B291AC28DC600EB874B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		845D8B2B1AC28DC600EB874B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		845D8B2C1AC28DC600EB874B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		845D8B2F1AC28DC600EB874B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		845D8B311AC28DC600EB874B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		845D8B341AC28DC600EB874B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		845D8B3A1AC28DC600EB874B /* HopsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		845D8B3F1AC28DC600EB874B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845D8B401AC28DC600EB874B /* HopsterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopsterTests.m; sourceTree = "<group>"; };
+		845D8B4D1ACA2F1D00EB874B /* BarFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarFeedViewController.h; path = ../BarFeedViewController.h; sourceTree = "<group>"; };
+		845D8B4E1ACA2F1D00EB874B /* BarFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarFeedViewController.m; path = ../BarFeedViewController.m; sourceTree = "<group>"; };
+		845D8B501ACA30E700EB874B /* BeerFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerFeedViewController.h; sourceTree = "<group>"; };
+		845D8B511ACA30E700EB874B /* BeerFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerFeedViewController.m; sourceTree = "<group>"; };
+		845D8B531ACA311500EB874B /* MainFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFeedViewController.h; sourceTree = "<group>"; };
+		845D8B541ACA311500EB874B /* MainFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842E04A51AD48C690036945C /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +96,7 @@
 		845D8B151AC28DC600EB874B = {
 			isa = PBXGroup;
 			children = (
+				842E04A41AD48C680036945C /* Security.framework */,
 				845D8B201AC28DC600EB874B /* Hopster */,
 				845D8B3D1AC28DC600EB874B /* HopsterTests */,
 				845D8B1F1AC28DC600EB874B /* Products */,
@@ -86,13 +117,31 @@
 			children = (
 				845D8B251AC28DC600EB874B /* AppDelegate.h */,
 				845D8B261AC28DC600EB874B /* AppDelegate.m */,
+				845D8B4D1ACA2F1D00EB874B /* BarFeedViewController.h */,
+				845D8B4E1ACA2F1D00EB874B /* BarFeedViewController.m */,
+				842E04B21ADB75070036945C /* BarDataSource.h */,
+				842E04B31ADB75070036945C /* BarDataSource.m */,
+				842E04B51ADB75C00036945C /* Bar.h */,
+				842E04B61ADB75C00036945C /* Bar.m */,
+				842E04A91AD4AF4C0036945C /* Beer.h */,
+				842E04AA1AD4AF4C0036945C /* Beer.m */,
+				842E04A61AD4AE5B0036945C /* BeerDataSource.h */,
+				842E04A71AD4AE5B0036945C /* BeerDataSource.m */,
+				845D8B501ACA30E700EB874B /* BeerFeedViewController.h */,
+				845D8B511ACA30E700EB874B /* BeerFeedViewController.m */,
+				842E049C1AD345B80036945C /* DownloadAssistant.h */,
+				842E049D1AD345B80036945C /* DownloadAssistant.m */,
 				845D8B281AC28DC600EB874B /* FirstViewController.h */,
+				842E04AC1AD4B24F0036945C /* LoginManager.h */,
+				842E04AD1AD4B24F0036945C /* LoginManager.m */,
 				845D8B291AC28DC600EB874B /* FirstViewController.m */,
-				845D8B2B1AC28DC600EB874B /* SecondViewController.h */,
-				845D8B2C1AC28DC600EB874B /* SecondViewController.m */,
-				845D8B2E1AC28DC600EB874B /* Main.storyboard */,
 				845D8B311AC28DC600EB874B /* Images.xcassets */,
 				845D8B331AC28DC600EB874B /* LaunchScreen.xib */,
+				842E049F1AD3AA590036945C /* Main.storyboard */,
+				845D8B531ACA311500EB874B /* MainFeedViewController.h */,
+				845D8B541ACA311500EB874B /* MainFeedViewController.m */,
+				842E04A11AD488F50036945C /* MainTabBarController.h */,
+				842E04A21AD488F50036945C /* MainTabBarController.m */,
 				845D8B211AC28DC600EB874B /* Supporting Files */,
 			);
 			path = Hopster;
@@ -204,7 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845D8B301AC28DC600EB874B /* Main.storyboard in Resources */,
+				842E04A01AD3AA590036945C /* Main.storyboard in Resources */,
 				845D8B351AC28DC600EB874B /* LaunchScreen.xib in Resources */,
 				845D8B321AC28DC600EB874B /* Images.xcassets in Resources */,
 			);
@@ -224,10 +273,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845D8B2D1AC28DC600EB874B /* SecondViewController.m in Sources */,
+				842E049E1AD345B80036945C /* DownloadAssistant.m in Sources */,
 				845D8B271AC28DC600EB874B /* AppDelegate.m in Sources */,
 				845D8B2A1AC28DC600EB874B /* FirstViewController.m in Sources */,
+				842E04A81AD4AE5B0036945C /* BeerDataSource.m in Sources */,
+				845D8B4F1ACA2F1D00EB874B /* BarFeedViewController.m in Sources */,
+				842E04AB1AD4AF4C0036945C /* Beer.m in Sources */,
+				842E04B41ADB75080036945C /* BarDataSource.m in Sources */,
+				845D8B551ACA311500EB874B /* MainFeedViewController.m in Sources */,
+				845D8B521ACA30E700EB874B /* BeerFeedViewController.m in Sources */,
+				842E04B71ADB75C00036945C /* Bar.m in Sources */,
+				842E04A31AD488F50036945C /* MainTabBarController.m in Sources */,
 				845D8B241AC28DC600EB874B /* main.m in Sources */,
+				842E04AE1AD4B24F0036945C /* LoginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,14 +308,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		845D8B2E1AC28DC600EB874B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				845D8B2F1AC28DC600EB874B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		845D8B331AC28DC600EB874B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -418,6 +468,7 @@
 				845D8B461AC28DC600EB874B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845D8B471AC28DC600EB874B /* Build configuration list for PBXNativeTarget "HopsterTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +477,7 @@
 				845D8B491AC28DC600EB874B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

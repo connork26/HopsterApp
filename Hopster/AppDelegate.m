@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "FirstViewController.h"
+#import "MainFeedViewController.h"
+#import "BeerFeedViewController.h"
+#import "BarFeedViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
     return YES;
 }
 
