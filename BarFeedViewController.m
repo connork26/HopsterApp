@@ -22,8 +22,8 @@ static NSString * cellIdent = @"barCell";
     [super viewDidLoad];
     NSString * url = @"pubs/allPubs";
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdent];
-    
+    [self.tabBarController setTitle:@"Bars"];
+
     self.dataSource = [[BarDataSource alloc] initWithBarsAtURL:url];
     self.dataSource.delegate = self;
     
@@ -59,16 +59,24 @@ static NSString * cellIdent = @"barCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.dataSource numberOfBars];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdent forIndexPath:indexPath];
     
-    // Configure the cell...
+    Bar * bar = [self.dataSource barAtIndex:[indexPath row]];
+    
+    UILabel * nameLabel = (UILabel *)[cell.contentView viewWithTag:1];
+    UILabel * addressLabel = (UILabel *) [cell.contentView viewWithTag:3];
+    
+    NSString * street = [NSString stringWithFormat:@"%@, %@ %@", [bar getValueForAttribute:@"streetAddress"], [bar getValueForAttribute:@"city"],[bar getValueForAttribute:@"stateAbrv"]];
+    
+    NSLog(bar.name);
+    
+    nameLabel.text = [bar getValueForAttribute:@"name"];
+    addressLabel.text = street;
     
     return cell;
 }
@@ -78,6 +86,7 @@ static NSString * cellIdent = @"barCell";
     [self.tableView reloadData];
     [sender endRefreshing];
 }
+
 
 /*
 #pragma mark - Navigation

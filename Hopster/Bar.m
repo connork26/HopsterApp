@@ -35,7 +35,7 @@
 }
 
 -(NSString *) name {
-    return ([self getValueForAttribute:@"barName"]);
+    return ([self getValueForAttribute:@"name"]);
 }
 
 @end

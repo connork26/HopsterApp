@@ -19,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger userID = [[defaults objectForKey:@"userID"] integerValue];
+    
+    [self.tabBarController setTitle:@"Feed"];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

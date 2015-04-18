@@ -8,6 +8,7 @@
 
 #import "BeerFeedViewController.h"
 #import "BeerDataSource.h"
+#import "BeerDetailsViewController.h"
 
 @interface BeerFeedViewController ()
 
@@ -25,7 +26,8 @@ static NSString * cellIdent = @"beerCell";
     [super viewDidLoad];
     self.beerURL = @"beers/allBeers";
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdent];
+    [self.tabBarController setTitle:@"Beers"];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     self.dataSource = [[BeerDataSource alloc] initWithBeersAtURL:self.beerURL];
     self.dataSource.delegate = self;
@@ -69,19 +71,17 @@ static NSString * cellIdent = @"beerCell";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdent forIndexPath:indexPath];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdent forIndexPath:indexPath];
     
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdent];
-    }
     
     Beer * beer = [self.dataSource beerAtIndex:[indexPath row]];
     
-    UILabel * titleLabel = (UILabel *)[cell viewWithTag:1];
-    UILabel * breweryLabel = (UILabel *)[cell viewWithTag:2];
-    UILabel * styleLabel = (UILabel *)[cell viewWithTag:3];
+    UILabel * titleLabel = (UILabel *)[cell.contentView viewWithTag:1];
+    UILabel * breweryLabel = (UILabel *)[cell.contentView viewWithTag:2];
+    UILabel * styleLabel = (UILabel *)[cell.contentView viewWithTag:3];
     
     NSLog(@"Beer name: %@", beer.name);
+    //NSLog(@"cell: %@", cell);
     
     [titleLabel setText:beer.name];
     breweryLabel.text = [beer getValueForAttribute:@"breweryName"];
@@ -96,14 +96,16 @@ static NSString * cellIdent = @"beerCell";
     [sender endRefreshing];
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    BeerDetailsViewController * nextController =  [segue destinationViewController];
+    [nextController setBeer: [self.dataSource beerAtIndex:[[self.tableView indexPathForSelectedRow] row]]];
 }
-*/
+
+-(void) viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
 
 @end

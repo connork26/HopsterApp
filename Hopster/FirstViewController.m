@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, LoginStatus){
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
+@property (nonatomic) NSDictionary * userInfo;
 
 @property (nonatomic) LoginStatus status;
 
@@ -33,6 +34,14 @@ typedef NS_ENUM(NSInteger, LoginStatus){
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@", [defaults objectForKey:@"userID"]);
+    
+    if((NSString *)[defaults objectForKey:@"userID"] ){
+        [self performSegueWithIdentifier:@"toMainFeed" sender:self];
+    }
+    
     self.status = NOTLOGGEDIN;
 }
 
@@ -55,7 +64,6 @@ typedef NS_ENUM(NSInteger, LoginStatus){
         
         
         if (self.status == INVALID || self.status == NOTLOGGEDIN){
-            self.errorLabel.text = @"Invalid Login!";
             self.status = NOTLOGGEDIN;
             return NO;
         }
@@ -82,34 +90,29 @@ typedef NS_ENUM(NSInteger, LoginStatus){
 }
 
 -(void) acceptWebData: (NSData *) webData forURL: (NSURL *) url{
-    NSDictionary * json = [NSJSONSerialization JSONObjectWithData:webData options:kNilOptions error:nil];
+    self.userInfo = [NSJSONSerialization JSONObjectWithData:webData options:kNilOptions error:nil];
     
-    if ([json objectForKey:@"error"]) {
+    if ([self.userInfo objectForKey:@"error"]) {
         self.errorLabel.text = @"Invalid login!";
         self.status = INVALID;
         return;
     }
     
-    NSLog(@"Logged in! First Name: %@", [json objectForKey:@"fName"]);
+    NSLog(@"Logged in! First Name: %@", [self.userInfo objectForKey:@"fName"]);
     self.status = VALID;
     
+    [self performSegueWithIdentifier:@"toMainFeed" sender:self];
+    
 }
 
--(void) saveUsername:(NSString*)user withPassword:(NSString*)pass forServer:(NSString*)server {
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    // Create dictionary of search parameters
-    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)(kSecClassInternetPassword),  kSecClass, server, kSecAttrServer, kCFBooleanTrue, kSecReturnAttributes, nil];
+    [defaults setObject:[self.userInfo objectForKey:@"fName"] forKey:@"fName"];
+    [defaults setObject:[self.userInfo objectForKey:@"lName"] forKey:@"lName"];
+    [defaults setInteger:[[self.userInfo objectForKey:@"userID"] integerValue] forKey:@"userID"];
     
-    // Remove any old values from the keychain
-    OSStatus err = SecItemDelete((__bridge CFDictionaryRef) dict);
-    
-    // Create dictionary of parameters to add
-    NSData* passwordData = [pass dataUsingEncoding:NSUTF8StringEncoding];
-    dict = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)(kSecClassInternetPassword), kSecClass, server, kSecAttrServer, passwordData, kSecValueData, user, kSecAttrAccount, nil];
-    
-    // Try to save to keychain
-    err = SecItemAdd((__bridge CFDictionaryRef) dict, NULL);
+    [defaults synchronize];
 }
-
 
 @end

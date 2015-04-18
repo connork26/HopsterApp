@@ -13,9 +13,9 @@
 		842E04A51AD48C690036945C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842E04A41AD48C680036945C /* Security.framework */; };
 		842E04A81AD4AE5B0036945C /* BeerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04A71AD4AE5B0036945C /* BeerDataSource.m */; };
 		842E04AB1AD4AF4C0036945C /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04AA1AD4AF4C0036945C /* Beer.m */; };
-		842E04AE1AD4B24F0036945C /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04AD1AD4B24F0036945C /* LoginManager.m */; };
 		842E04B41ADB75080036945C /* BarDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04B31ADB75070036945C /* BarDataSource.m */; };
 		842E04B71ADB75C00036945C /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04B61ADB75C00036945C /* Bar.m */; };
+		842E04BA1ADC74A80036945C /* BeerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04B91ADC74A80036945C /* BeerDetailsViewController.m */; };
 		845D8B241AC28DC600EB874B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B231AC28DC600EB874B /* main.m */; };
 		845D8B271AC28DC600EB874B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B261AC28DC600EB874B /* AppDelegate.m */; };
 		845D8B2A1AC28DC600EB874B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B291AC28DC600EB874B /* FirstViewController.m */; };
@@ -48,12 +48,12 @@
 		842E04A71AD4AE5B0036945C /* BeerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerDataSource.m; sourceTree = "<group>"; };
 		842E04A91AD4AF4C0036945C /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beer.h; sourceTree = "<group>"; };
 		842E04AA1AD4AF4C0036945C /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
-		842E04AC1AD4B24F0036945C /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
-		842E04AD1AD4B24F0036945C /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		842E04B21ADB75070036945C /* BarDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarDataSource.h; sourceTree = "<group>"; };
 		842E04B31ADB75070036945C /* BarDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarDataSource.m; sourceTree = "<group>"; };
 		842E04B51ADB75C00036945C /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
 		842E04B61ADB75C00036945C /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
+		842E04B81ADC74A80036945C /* BeerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerDetailsViewController.h; sourceTree = "<group>"; };
+		842E04B91ADC74A80036945C /* BeerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerDetailsViewController.m; sourceTree = "<group>"; };
 		845D8B1E1AC28DC600EB874B /* Hopster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hopster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845D8B221AC28DC600EB874B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845D8B231AC28DC600EB874B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,12 +132,12 @@
 				842E049C1AD345B80036945C /* DownloadAssistant.h */,
 				842E049D1AD345B80036945C /* DownloadAssistant.m */,
 				845D8B281AC28DC600EB874B /* FirstViewController.h */,
-				842E04AC1AD4B24F0036945C /* LoginManager.h */,
-				842E04AD1AD4B24F0036945C /* LoginManager.m */,
 				845D8B291AC28DC600EB874B /* FirstViewController.m */,
 				845D8B311AC28DC600EB874B /* Images.xcassets */,
 				845D8B331AC28DC600EB874B /* LaunchScreen.xib */,
 				842E049F1AD3AA590036945C /* Main.storyboard */,
+				842E04B81ADC74A80036945C /* BeerDetailsViewController.h */,
+				842E04B91ADC74A80036945C /* BeerDetailsViewController.m */,
 				845D8B531ACA311500EB874B /* MainFeedViewController.h */,
 				845D8B541ACA311500EB874B /* MainFeedViewController.m */,
 				842E04A11AD488F50036945C /* MainTabBarController.h */,
@@ -276,6 +276,7 @@
 				842E049E1AD345B80036945C /* DownloadAssistant.m in Sources */,
 				845D8B271AC28DC600EB874B /* AppDelegate.m in Sources */,
 				845D8B2A1AC28DC600EB874B /* FirstViewController.m in Sources */,
+				842E04BA1ADC74A80036945C /* BeerDetailsViewController.m in Sources */,
 				842E04A81AD4AE5B0036945C /* BeerDataSource.m in Sources */,
 				845D8B4F1ACA2F1D00EB874B /* BarFeedViewController.m in Sources */,
 				842E04AB1AD4AF4C0036945C /* Beer.m in Sources */,
@@ -285,7 +286,6 @@
 				842E04B71ADB75C00036945C /* Bar.m in Sources */,
 				842E04A31AD488F50036945C /* MainTabBarController.m in Sources */,
 				845D8B241AC28DC600EB874B /* main.m in Sources */,
-				842E04AE1AD4B24F0036945C /* LoginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
