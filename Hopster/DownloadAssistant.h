@@ -15,6 +15,8 @@
 @property (nonatomic) id<WebDataReadyDelegate> delegate;
 
 -(void) downloadContentsOfURL: (NSString *) url;
+-(void) postContentsOfURL: (NSString *) inURL withData: (NSString *) post;
+
 -(NSData *) downloadedData;
 
 @end

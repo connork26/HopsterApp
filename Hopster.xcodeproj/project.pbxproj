@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2B15911AF400BB00FB3C22 /* BarFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B15901AF400BB00FB3C22 /* BarFeedViewController.m */; };
+		3F2B15931AF401AF00FB3C22 /* logo_beard_nosmile.tif in Resources */ = {isa = PBXBuildFile; fileRef = 3F2B15921AF401AF00FB3C22 /* logo_beard_nosmile.tif */; };
+		6CA395C81AE59E040077DF0C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA395C71AE59E040077DF0C /* SignUpViewController.m */; };
 		842E049E1AD345B80036945C /* DownloadAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E049D1AD345B80036945C /* DownloadAssistant.m */; };
 		842E04A01AD3AA590036945C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842E049F1AD3AA590036945C /* Main.storyboard */; };
 		842E04A31AD488F50036945C /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E04A21AD488F50036945C /* MainTabBarController.m */; };
@@ -22,7 +25,6 @@
 		845D8B321AC28DC600EB874B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845D8B311AC28DC600EB874B /* Images.xcassets */; };
 		845D8B351AC28DC600EB874B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845D8B331AC28DC600EB874B /* LaunchScreen.xib */; };
 		845D8B411AC28DC600EB874B /* HopsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B401AC28DC600EB874B /* HopsterTests.m */; };
-		845D8B4F1ACA2F1D00EB874B /* BarFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B4E1ACA2F1D00EB874B /* BarFeedViewController.m */; };
 		845D8B521ACA30E700EB874B /* BeerFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B511ACA30E700EB874B /* BeerFeedViewController.m */; };
 		845D8B551ACA311500EB874B /* MainFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8B541ACA311500EB874B /* MainFeedViewController.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2B158F1AF400BB00FB3C22 /* BarFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarFeedViewController.h; sourceTree = "<group>"; };
+		3F2B15901AF400BB00FB3C22 /* BarFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarFeedViewController.m; sourceTree = "<group>"; };
+		3F2B15921AF401AF00FB3C22 /* logo_beard_nosmile.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = logo_beard_nosmile.tif; sourceTree = "<group>"; };
+		6CA395C61AE59E040077DF0C /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		6CA395C71AE59E040077DF0C /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		842E049C1AD345B80036945C /* DownloadAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadAssistant.h; sourceTree = "<group>"; };
 		842E049D1AD345B80036945C /* DownloadAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadAssistant.m; sourceTree = "<group>"; };
 		842E049F1AD3AA590036945C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -66,8 +73,6 @@
 		845D8B3A1AC28DC600EB874B /* HopsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		845D8B3F1AC28DC600EB874B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845D8B401AC28DC600EB874B /* HopsterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopsterTests.m; sourceTree = "<group>"; };
-		845D8B4D1ACA2F1D00EB874B /* BarFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarFeedViewController.h; path = ../BarFeedViewController.h; sourceTree = "<group>"; };
-		845D8B4E1ACA2F1D00EB874B /* BarFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarFeedViewController.m; path = ../BarFeedViewController.m; sourceTree = "<group>"; };
 		845D8B501ACA30E700EB874B /* BeerFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerFeedViewController.h; sourceTree = "<group>"; };
 		845D8B511ACA30E700EB874B /* BeerFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerFeedViewController.m; sourceTree = "<group>"; };
 		845D8B531ACA311500EB874B /* MainFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFeedViewController.h; sourceTree = "<group>"; };
@@ -117,8 +122,6 @@
 			children = (
 				845D8B251AC28DC600EB874B /* AppDelegate.h */,
 				845D8B261AC28DC600EB874B /* AppDelegate.m */,
-				845D8B4D1ACA2F1D00EB874B /* BarFeedViewController.h */,
-				845D8B4E1ACA2F1D00EB874B /* BarFeedViewController.m */,
 				842E04B21ADB75070036945C /* BarDataSource.h */,
 				842E04B31ADB75070036945C /* BarDataSource.m */,
 				842E04B51ADB75C00036945C /* Bar.h */,
@@ -126,6 +129,8 @@
 				842E04A91AD4AF4C0036945C /* Beer.h */,
 				842E04AA1AD4AF4C0036945C /* Beer.m */,
 				842E04A61AD4AE5B0036945C /* BeerDataSource.h */,
+				3F2B158F1AF400BB00FB3C22 /* BarFeedViewController.h */,
+				3F2B15901AF400BB00FB3C22 /* BarFeedViewController.m */,
 				842E04A71AD4AE5B0036945C /* BeerDataSource.m */,
 				845D8B501ACA30E700EB874B /* BeerFeedViewController.h */,
 				845D8B511ACA30E700EB874B /* BeerFeedViewController.m */,
@@ -136,6 +141,8 @@
 				845D8B311AC28DC600EB874B /* Images.xcassets */,
 				845D8B331AC28DC600EB874B /* LaunchScreen.xib */,
 				842E049F1AD3AA590036945C /* Main.storyboard */,
+				6CA395C61AE59E040077DF0C /* SignUpViewController.h */,
+				6CA395C71AE59E040077DF0C /* SignUpViewController.m */,
 				842E04B81ADC74A80036945C /* BeerDetailsViewController.h */,
 				842E04B91ADC74A80036945C /* BeerDetailsViewController.m */,
 				845D8B531ACA311500EB874B /* MainFeedViewController.h */,
@@ -150,6 +157,7 @@
 		845D8B211AC28DC600EB874B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F2B15921AF401AF00FB3C22 /* logo_beard_nosmile.tif */,
 				845D8B221AC28DC600EB874B /* Info.plist */,
 				845D8B231AC28DC600EB874B /* main.m */,
 			);
@@ -256,6 +264,7 @@
 				842E04A01AD3AA590036945C /* Main.storyboard in Resources */,
 				845D8B351AC28DC600EB874B /* LaunchScreen.xib in Resources */,
 				845D8B321AC28DC600EB874B /* Images.xcassets in Resources */,
+				3F2B15931AF401AF00FB3C22 /* logo_beard_nosmile.tif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,18 +282,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2B15911AF400BB00FB3C22 /* BarFeedViewController.m in Sources */,
 				842E049E1AD345B80036945C /* DownloadAssistant.m in Sources */,
 				845D8B271AC28DC600EB874B /* AppDelegate.m in Sources */,
 				845D8B2A1AC28DC600EB874B /* FirstViewController.m in Sources */,
 				842E04BA1ADC74A80036945C /* BeerDetailsViewController.m in Sources */,
 				842E04A81AD4AE5B0036945C /* BeerDataSource.m in Sources */,
-				845D8B4F1ACA2F1D00EB874B /* BarFeedViewController.m in Sources */,
 				842E04AB1AD4AF4C0036945C /* Beer.m in Sources */,
 				842E04B41ADB75080036945C /* BarDataSource.m in Sources */,
 				845D8B551ACA311500EB874B /* MainFeedViewController.m in Sources */,
 				845D8B521ACA30E700EB874B /* BeerFeedViewController.m in Sources */,
 				842E04B71ADB75C00036945C /* Bar.m in Sources */,
 				842E04A31AD488F50036945C /* MainTabBarController.m in Sources */,
+				6CA395C81AE59E040077DF0C /* SignUpViewController.m in Sources */,
 				845D8B241AC28DC600EB874B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

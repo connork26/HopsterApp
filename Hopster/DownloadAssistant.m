@@ -26,9 +26,32 @@
 
 -(void) downloadContentsOfURL: (NSString *) inURL
 {
-    NSString * baseURL = @"http://localhost:3000/";
+    NSString * baseURL = @"http://hopster.herokuapp.com/";
     self.url = [NSURL URLWithString:[baseURL stringByAppendingString:inURL]];
     NSURLRequest *request = [NSURLRequest requestWithURL: self.url];
+    if( _conn)
+        [_conn cancel];
+    _conn = [[NSURLConnection alloc] initWithRequest: request delegate: self startImmediately: YES];
+}
+
+-(void) postContentsOfURL: (NSString *) inURL withData: (NSString *) post
+{
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
+    
+    
+    NSString * baseURL = @"http://hopster.herokuapp.com/";
+    self.url = [NSURL URLWithString:[baseURL stringByAppendingString:inURL]];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url];
+
+    
+    NSLog(@"URL: %@", self.url);
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
     if( _conn)
         [_conn cancel];
     _conn = [[NSURLConnection alloc] initWithRequest: request delegate: self startImmediately: YES];

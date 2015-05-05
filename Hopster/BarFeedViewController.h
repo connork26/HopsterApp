@@ -1,5 +1,5 @@
 //
-//  BeerFeerViewController.h
+//  BarFeedViewController.h
 //  Hopster
 //
 //  Created by Connor Kuehnle on 3/30/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BeerFeerViewController : UITableViewController
+@interface BarFeedViewController : UITableViewController
 
 @end
